@@ -1,0 +1,217 @@
+{
+  "value": [
+    {
+      "num": "015К",
+      "model": 0,
+      "category": 0,
+      "travel_time": "9:01",
+      "from": {
+        "station": "Харків-Пас",
+        "date": 1516663080,
+        "src_date": "2018-01-23 01:18:00"
+      },
+      "till": {
+        "station": "Рахів",
+        "date": 1516695540,
+        "src_date": "2018-01-23 10:19:00"
+      },
+      "types": [
+        {
+          "id": "С2",
+          "title": "Сидячий другого класу",
+          "letter": "С2",
+          "places": 20
+        }
+      ],
+      "allow_stud": 1,
+      "allow_transportation": 1,
+      "allow_booking": 1,
+      "allow_roundtrip": 1
+    },
+    {
+      "num": "015О",
+      "model": 0,
+      "category": 0,
+      "travel_time": "9:01",
+      "from": {
+        "station": "Харків-Пас",
+        "date": 1516663080,
+        "src_date": "2018-01-23 01:18:00"
+      },
+      "till": {
+        "station": "Рахів",
+        "date": 1516695540,
+        "src_date": "2018-01-23 10:19:00"
+      },
+      "types": [
+        {
+          "id": "Л",
+          "title": "Люкс",
+          "letter": "Л",
+          "places": 16
+        },
+        {
+          "id": "К",
+          "title": "Купе",
+          "letter": "К",
+          "places": 2
+        }
+      ],
+      "allow_stud": 1,
+      "allow_transportation": 1,
+      "allow_booking": 1,
+      "allow_roundtrip": 1
+    },
+    {
+      "num": "749К",
+      "model": 0,
+      "category": 2,
+      "travel_time": "8:03",
+      "from": {
+        "station": "Київ-Пасажирський",
+        "date": 1516709220,
+        "src_date": "2018-01-23 14:07:00"
+      },
+      "till": {
+        "station": "Івано-Франківськ",
+        "date": 1516738200,
+        "src_date": "2018-01-23 22:10:00"
+      },
+      "types": [
+        {
+          "id": "С1",
+          "title": "Сидячий першого класу",
+          "letter": "С1",
+          "places": 33
+        },
+        {
+          "id": "С2",
+          "title": "Сидячий другого класу",
+          "letter": "С2",
+          "places": 21
+        }
+      ],
+      "allow_stud": 1,
+      "allow_transportation": 1,
+      "allow_booking": 1,
+      "allow_roundtrip": 1
+    },
+    {
+      "num": "043К",
+      "model": 0,
+      "category": 0,
+      "travel_time": "10:53",
+      "from": {
+        "station": "Київ-Пасажирський",
+        "date": 1516726200,
+        "src_date": "2018-01-23 18:50:00"
+      },
+      "till": {
+        "station": "Івано-Франківськ",
+        "date": 1516765380,
+        "src_date": "2018-01-24 05:43:00"
+      },
+      "types": [
+        {
+          "id": "Л",
+          "title": "Люкс",
+          "letter": "Л",
+          "places": 14
+        },
+        {
+          "id": "К",
+          "title": "Купе",
+          "letter": "К",
+          "places": 26
+        },
+        {
+          "id": "П",
+          "title": "Плацкарт",
+          "letter": "П",
+          "places": 26
+        }
+      ],
+      "allow_stud": 1,
+      "allow_transportation": 1,
+      "allow_booking": 1,
+      "allow_roundtrip": 1
+    },
+    {
+      "num": "143К",
+      "model": 0,
+      "category": 0,
+      "travel_time": "12:36",
+      "from": {
+        "station": "Київ-Пасажирський",
+        "date": 1516731540,
+        "src_date": "2018-01-23 20:19:00"
+      },
+      "till": {
+        "station": "Ворохта",
+        "date": 1516776900,
+        "src_date": "2018-01-24 08:55:00"
+      },
+      "types": [
+        {
+          "id": "Л",
+          "title": "Люкс",
+          "letter": "Л",
+          "places": 2
+        },
+        {
+          "id": "К",
+          "title": "Купе",
+          "letter": "К",
+          "places": 8
+        },
+        {
+          "id": "П",
+          "title": "Плацкарт",
+          "letter": "П",
+          "places": 36
+        }
+      ],
+      "allow_stud": 1,
+      "allow_transportation": 1,
+      "allow_booking": 1,
+      "allow_roundtrip": 1
+    },
+    {
+      "num": "007К",
+      "model": 0,
+      "category": 0,
+      "travel_time": "9:03",
+      "from": {
+        "station": "Київ-Пасажирський",
+        "date": 1516739220,
+        "src_date": "2018-01-23 22:27:00"
+      },
+      "till": {
+        "station": "Івано-Франківськ",
+        "date": 1516771800,
+        "src_date": "2018-01-24 07:30:00"
+      },
+      "types": [
+        {
+          "id": "Л",
+          "title": "Люкс",
+          "letter": "Л",
+          "places": 16
+        },
+        {
+          "id": "К",
+          "title": "Купе",
+          "letter": "К",
+          "places": 18
+        }
+      ],
+      "allow_stud": 1,
+      "allow_transportation": 1,
+      "allow_booking": 1,
+      "allow_roundtrip": 1
+    }
+  ],
+  "error": null,
+  "data": null,
+  "captcha": null
+}

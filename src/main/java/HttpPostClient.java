@@ -1,8 +1,3 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import entity.From;
-import entity.Train;
-import mappers.TrainSerializer;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;

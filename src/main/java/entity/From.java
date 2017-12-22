@@ -5,6 +5,9 @@ public class From {
     private String date;
     private String src_date;
 
+    public From() {
+    }
+
     public From(String station, String date, String src_date) {
         this.station = station;
         this.date = date;

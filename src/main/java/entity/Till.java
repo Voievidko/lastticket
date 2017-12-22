@@ -5,6 +5,9 @@ public class Till {
     private String date;
     private String src_date;
 
+    public Till() {
+    }
+
     public Till(String station, String date, String src_date) {
         this.station = station;
         this.date = date;

@@ -6,6 +6,9 @@ public class Type {
     private String letter;
     private int places;
 
+    public Type() {
+    }
+
     public Type(String id, String title, String letter, int places) {
         this.id = id;
         this.title = title;

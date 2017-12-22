@@ -1,8 +1,8 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import entity.From;
-import entity.Train;
-import mappers.TrainSerializer;
+import entity.Value;
+
 
 /**
  * Created by voievidko_ri on 26.10.2017.
@@ -20,12 +20,12 @@ public class Main {
         System.out.println(from);
 
         GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(Train.class, new TrainSerializer());
+//        builder.registerTypeAdapter(Value.class, new TrainSerializer());
 
 
         Gson updatedGson = builder.create();
-        Train train = updatedGson.fromJson(jsonTrain, Train.class);
+        Value value = updatedGson.fromJson(jsonTrain, Value.class);
 
-        System.out.println(train);
+        System.out.println(value);
     }
 }

@@ -1,13 +1,12 @@
 package entity;
 
-import org.joda.time.DateTime;
 import java.util.List;
 
-public class Train {
+public class Value {
     private String num;
     private int model;
     private int category;
-    private DateTime travel_time;
+    private String travel_time;
     private From from;
     private Till till;
     private List<Type> types;
@@ -16,7 +15,10 @@ public class Train {
     private int allow_booking;
     private int allow_roundtrip;
 
-    public Train(String num, int model, int category, DateTime travel_time, From from, Till till, List<Type> types,
+    public Value() {
+    }
+
+    public Value(String num, int model, int category, String travel_time, From from, Till till, List<Type> types,
                  int allow_stud, int allow_transportation, int allow_booking, int allow_roundtrip) {
         this.num = num;
         this.model = model;
@@ -55,11 +57,11 @@ public class Train {
         this.category = category;
     }
 
-    public DateTime getTravel_time() {
+    public String getTravel_time() {
         return travel_time;
     }
 
-    public void setTravel_time(DateTime travel_time) {
+    public void setTravel_time(String travel_time) {
         this.travel_time = travel_time;
     }
 
@@ -121,7 +123,7 @@ public class Train {
 
     @Override
     public String toString() {
-        return "Train{" + "\n" +
+        return "Value{" + "\n" +
                 "num='" + num + "'" +"\n" +
                 "model=" + model + "\n" +
                 "category=" + category + "\n" +
