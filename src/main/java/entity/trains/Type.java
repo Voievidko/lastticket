@@ -1,4 +1,4 @@
-package entity;
+package entity.trains;
 
 public class Type {
     private String id;

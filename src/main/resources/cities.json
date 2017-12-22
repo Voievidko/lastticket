@@ -1,0 +1,55 @@
+// 20171222181723
+// https://booking.uz.gov.ua/purchase/station/?term=%D0%BA%D0%B8
+
+[
+  {
+    "title": "Київ",
+    "region": null,
+    "value": 2200001
+  },
+  {
+    "title": "Київ-Волинський",
+    "region": " ",
+    "value": 2200003
+  },
+  {
+    "title": "Київ-Деміївський",
+    "region": null,
+    "value": 2200004
+  },
+  {
+    "title": "Київська Русанівка",
+    "region": null,
+    "value": 2201180
+  },
+  {
+    "title": "Кибартай",
+    "region": null,
+    "value": 2400433
+  },
+  {
+    "title": "Кибечи",
+    "region": null,
+    "value": 2061557
+  },
+  {
+    "title": "Кибинці",
+    "region": null,
+    "value": 2204196
+  },
+  {
+    "title": "Кибрай",
+    "region": null,
+    "value": 2900126
+  },
+  {
+    "title": "Кивач",
+    "region": null,
+    "value": 2024020
+  },
+  {
+    "title": "Кивер",
+    "region": null,
+    "value": 2010123
+  }
+]

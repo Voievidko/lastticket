@@ -1,16 +1,19 @@
 package mappers;
 
-import entity.Answer;
+import entity.city.City;
+import entity.trains.Trains;
 import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class AnswerSerializerTest {
-    private static final String PATH = "src\\main\\resources\\answer.json";
+public class CityMapperTest {
+
+    private static final String PATH = "src\\main\\resources\\cities.json";
 
     @Test
     public void baseTest(){
@@ -26,13 +29,10 @@ public class AnswerSerializerTest {
             e.printStackTrace();
         }
 
-        AnswerMapper answerMapper = new AnswerMapper();
-        Answer answer = answerMapper.toDto(json);
+        CityMapper cityMapper = new CityMapper();
+        List<City> trains = cityMapper.toDto(json);
 
-        assertNotNull(answer);
-        assertEquals(6, answer.getValue().size());
-        assertEquals("Сидячий другого класу",answer.getValue().get(0).getTypes().get(0).getTitle());
-
-
+        assertNotNull(trains);
     }
+
 }

@@ -1,7 +1,7 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import entity.From;
-import entity.Value;
+import entity.trains.From;
+import entity.trains.Value;
 
 
 /**

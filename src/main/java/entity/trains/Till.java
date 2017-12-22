@@ -1,14 +1,14 @@
-package entity;
+package entity.trains;
 
-public class From {
+public class Till {
     private String station;
     private String date;
     private String src_date;
 
-    public From() {
+    public Till() {
     }
 
-    public From(String station, String date, String src_date) {
+    public Till(String station, String date, String src_date) {
         this.station = station;
         this.date = date;
         this.src_date = src_date;

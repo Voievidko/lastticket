@@ -37,9 +37,6 @@ public class HttpPostClient {
                 e.printStackTrace();
             }
         }
-
-
-
     }
 
     private int printNumberOfTrains() throws Exception {

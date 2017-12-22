@@ -1,17 +1,17 @@
-package entity;
+package entity.trains;
 
 import java.util.List;
 
-public class Answer {
+public class Trains {
     private List<Value> value;
     private Error error;
     private Data data;
     private Captcha captcha;
 
-    public Answer() {
+    public Trains() {
     }
 
-    public Answer(List<Value> value, Error error, Data data, Captcha captcha) {
+    public Trains(List<Value> value, Error error, Data data, Captcha captcha) {
         this.value = value;
         this.error = error;
         this.data = data;
