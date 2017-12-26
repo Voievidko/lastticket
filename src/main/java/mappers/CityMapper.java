@@ -13,21 +13,16 @@ import java.io.IOException;
 import java.util.List;
 
 public class CityMapper {
-    public List<City> toDto(String input){
-
-
-        JsonFactory jf = new JsonFactory();
-        jf.enable(JsonParser.Feature.ALLOW_COMMENTS);
-
-        ObjectMapper mapper = new ObjectMapper(jf);
+    public static List<City> toDto(String input){
+        String json = input.substring(input.indexOf('['), input.indexOf(']') + 1);
+        ObjectMapper mapper = new ObjectMapper();
 
         List<City> city  = null;
         try {
-            city = mapper.readValue(input, new TypeReference<List<City>>(){});
+            city = mapper.readValue(json, new TypeReference<List<City>>(){});
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return city;
     }
 }

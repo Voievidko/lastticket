@@ -8,7 +8,8 @@ import org.codehaus.jackson.map.ObjectMapper;
 import java.io.IOException;
 
 public class TrainsMapper {
-    public Trains toDto(String input){
+    public static Trains toDto(String input){
+
         Trains trains = null;
         ObjectMapper mapper = new ObjectMapper();
 

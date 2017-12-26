@@ -8,6 +8,7 @@ public class Value {
     private int category;
     private String travel_time;
     private From from;
+    private int is_europe;
     private Till till;
     private List<Type> types;
     private int allow_stud;
@@ -18,13 +19,13 @@ public class Value {
     public Value() {
     }
 
-    public Value(String num, int model, int category, String travel_time, From from, Till till, List<Type> types,
-                 int allow_stud, int allow_transportation, int allow_booking, int allow_roundtrip) {
+    public Value(String num, int model, int category, String travel_time, From from, int is_europe, Till till, List<Type> types, int allow_stud, int allow_transportation, int allow_booking, int allow_roundtrip) {
         this.num = num;
         this.model = model;
         this.category = category;
         this.travel_time = travel_time;
         this.from = from;
+        this.is_europe = is_europe;
         this.till = till;
         this.types = types;
         this.allow_stud = allow_stud;
@@ -139,4 +140,11 @@ public class Value {
     }
 
 
+    public int getIs_europe() {
+        return is_europe;
+    }
+
+    public void setIs_europe(int is_europe) {
+        this.is_europe = is_europe;
+    }
 }
