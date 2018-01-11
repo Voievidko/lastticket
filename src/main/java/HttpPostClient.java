@@ -19,56 +19,51 @@ import java.util.Random;
 public class HttpPostClient {
     private final String URL = "https://booking.uz.gov.ua/purchase/search/";
 
-    public static void main(String[] args){
+    public void searchTicketWithDelay(String fromStation, String toStation, String date){
         HttpPostClient httpPostClient = new HttpPostClient();
 
+        System.out.println("Code for " + fromStation + ": " + CityPicker.getCityCode(fromStation));
+        System.out.println("Code for " + toStation + ": " + CityPicker.getCityCode(toStation));
+
+        System.out.println("Start: ");
+
+
         Trains trains = null;
-        try {
-            trains = httpPostClient.sendPost("Київ", "Івано-Франківськ", "20.01.2018");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        boolean flag = true;
 
 
-        System.out.println("Total trains: " + trains.getValue().size());
-        for(Value value : trains.getValue()){
-            System.out.println(value.getNum());
+
+        while (flag){
+            try {
+                trains = httpPostClient.sendPost(fromStation, toStation, date);
+
+                if (trains!=null && !trains.getValue().get(0).getNum().equals("013К")){
+                    System.out.println("Trains was found");
+
+                    //JOptionPane.showMessageDialog(null, "Buy!","", JOptionPane.ERROR_MESSAGE);
+
+                    JOptionPane pane = new JOptionPane("Tickets was found");
+                    JDialog dialog = pane.createDialog("Buy!");
+                    dialog.setAlwaysOnTop(true);
+                    dialog.show();
+
+
+                    flag = false;
+                    System.exit(0);
+                    return;
+                } else {
+                    int sleepTime = getDelay();
+                    System.out.println("There no trains now. Delay: " + (double)sleepTime/1000 + " seconds");
+
+                    Thread.sleep(sleepTime);
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-//        boolean flag = true;
-//        while (flag){
-//            try {
-//                int counter = httpPostClient.printNumberOfTrains();
-//                if (counter>2){
-//                    System.out.println("BUY!!!!!!!");
-//                    JOptionPane.showMessageDialog(null, "Buy", "InfoBox: ", JOptionPane.INFORMATION_MESSAGE);
-//                    flag = false;
-//                } else {
-//                    Random rnd = new Random();
-//                    int sleepTime = (int)(5000 + 10000 * rnd.nextDouble());
-//                    Thread.sleep(sleepTime);
-//                    System.out.println("Number of trains now: " + counter + "  Sleep time: " + sleepTime);
-//
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
     }
-
-//    private int printNumberOfTrains() throws Exception {
-//        HttpPostClient http = new HttpPostClient();
-//        String JsonLine = http.sendPost();
-//
-//        int index = JsonLine.indexOf("num");
-//        int count = 0;
-//        while (index != -1) {
-//            count++;
-//            JsonLine = JsonLine.substring(index + 1);
-//            index = JsonLine.indexOf("num");
-//        }
-//
-//        return count;
-//    }
 
     // HTTP POST request
     private Trains sendPost(String fromStation, String toStation, String date) throws Exception {
@@ -104,5 +99,10 @@ public class HttpPostClient {
             result.append(line);
         }
         return TrainsMapper.toDto(result.toString());
+    }
+
+    private int getDelay(){
+        Random rnd = new Random();
+        return  (int)(5000 + 10000 * rnd.nextDouble());
     }
 }

@@ -3,6 +3,8 @@ import com.google.gson.GsonBuilder;
 import entity.trains.From;
 import entity.trains.Value;
 
+import java.util.Scanner;
+
 
 /**
  * Created by voievidko_ri on 26.10.2017.
@@ -11,21 +13,25 @@ public class Main {
     public static void main(String[] args) {
 
 
+//        Scanner scanner = new Scanner( System.in);
+//        System.out.println("UZ Ticket scanner");
+//        System.out.print("From station (in ukrainian): ");
+//        String from = scanner.nextLine();
+//        System.out.print("To station (in ukrainian): ");
+//        String to = scanner.nextLine();
+//        System.out.print( "Date (in format DD.MM.YYYY): " );
+//        String date = scanner.nextLine();
+//        System.out.println();
+//        System.out.println();
+//        System.out.println();
+        String from = "Київ";
+        String to = "Самбір";
+        String dateTo = "09.01.2018";
+        //String dateFrom = "08.01.2018";
+
+        HttpPostClient httpPostClient = new HttpPostClient();
+        httpPostClient.searchTicketWithDelay(to,from,dateTo);
 
 
-        String jsonTrain = "{\"num\":\"749К\",\"model\":0,\"category\":2,\"travel_time\":\"7:49\",\"from\":{\"station\":\"Київ-Пасажирський\",\"date\":1512043740,\"src_date\":\"2017-11-30 14:09:00\"},\"till\":{\"station\":\"Івано-Франківськ\",\"date\":1512071880,\"src_date\":\"2017-11-30 21:58:00\"},\"types\":[{\"id\":\"С1\",\"title\":\"Сидячий першого класу\",\"letter\":\"С1\",\"places\":36},{\"id\":\"С2\",\"title\":\"Сидячий другого класу\",\"letter\":\"С2\",\"places\":56}],\"allow_stud\":1,\"allow_transportation\":1,\"allow_booking\":1,\"allow_roundtrip\":1}";
-
-        Gson gson = new Gson();
-        From from = gson.fromJson(jsonTrain, From.class);
-        System.out.println(from);
-
-        GsonBuilder builder = new GsonBuilder();
-//        builder.registerTypeAdapter(Value.class, new TrainSerializer());
-
-
-        Gson updatedGson = builder.create();
-        Value value = updatedGson.fromJson(jsonTrain, Value.class);
-
-        System.out.println(value);
     }
 }

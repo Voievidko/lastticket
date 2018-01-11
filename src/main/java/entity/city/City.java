@@ -1,5 +1,8 @@
 package entity.city;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class City {
     private String title;
     private String region;
