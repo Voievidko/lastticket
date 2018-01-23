@@ -8,10 +8,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-public class TrainsMapperTest {
-    private static final String PATH = "src\\main\\resources\\answer.json";
+public class UpdatedTrainsMapperTest {
+    private static final String PATH = "src\\main\\resources\\updatedAnswer.json";
 
     @Test
     public void baseTest(){
@@ -31,7 +32,9 @@ public class TrainsMapperTest {
         Data trains = trainsMapper.toDto(json);
 
         assertNotNull(trains);
-        assertEquals(6, trains.getTrains().size());
+
+        System.out.println(trains.getTrains());
+        //assertEquals(16, trains.getTrains().size());
         //assertEquals("Сидячий другого класу", trains.getValue().get(0).getTypes().get(0).getTitle());
 
 

@@ -30,7 +30,7 @@ public class Main {
         //String dateFrom = "08.01.2018";
 
         HttpPostClient httpPostClient = new HttpPostClient();
-        httpPostClient.searchTicketWithDelay(to,from,dateTo);
+        httpPostClient.searchTicketWithDelay(from,to,dateTo);
 
 
     }
