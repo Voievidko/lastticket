@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class CityPicker {
-    private static final String URL = "https://booking.uz.gov.ua/purchase/station/?term=";
+    private static final String URL = "https://booking.uz.gov.ua/train_search/station/?term=";
 
     public static String getCityCode(String cityName){
         String json = getJsonFromUZServer(cityName);

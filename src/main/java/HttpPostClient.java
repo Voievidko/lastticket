@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Random;
 
 public class HttpPostClient {
-    private final String URL = "https://booking.uz.gov.ua/purchase/search/";
+    private final String URL = "https://booking.uz.gov.ua/train_search/";
 
     public void searchTicketWithDelay(String fromStation, String toStation, String date){
         HttpPostClient httpPostClient = new HttpPostClient();
@@ -74,21 +74,23 @@ public class HttpPostClient {
         String toStationCode = CityPicker.getCityCode(toStation);
 
         List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-        urlParameters.add(new BasicNameValuePair("station_id_from", fromStationCode));
-        urlParameters.add(new BasicNameValuePair("station_id_till", toStationCode));
-        urlParameters.add(new BasicNameValuePair("station_from", ""));
-        urlParameters.add(new BasicNameValuePair("station_till", ""));
-        urlParameters.add(new BasicNameValuePair("date_dep", date));
-        urlParameters.add(new BasicNameValuePair("time_dep", "00:00"));
-        urlParameters.add(new BasicNameValuePair("time_dep_till", ""));
+        urlParameters.add(new BasicNameValuePair("from", fromStationCode));
+        urlParameters.add(new BasicNameValuePair("to", toStationCode));
+//        urlParameters.add(new BasicNameValuePair("station_from", ""));
+//        urlParameters.add(new BasicNameValuePair("station_till", ""));
+        urlParameters.add(new BasicNameValuePair("date", date));
+        urlParameters.add(new BasicNameValuePair("time", "00:00"));
+//        urlParameters.add(new BasicNameValuePair("time_dep_till", ""));
         urlParameters.add(new BasicNameValuePair("another_ec", "0"));
-        urlParameters.add(new BasicNameValuePair("search", ""));
+        //urlParameters.add(new BasicNameValuePair("search", ""));
 
 
         post.setEntity(new UrlEncodedFormEntity(urlParameters, "UTF-8"));
 
 
         HttpResponse response = client.execute(post);
+
+        //System.out.println(response.toString());
 
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
@@ -98,6 +100,7 @@ public class HttpPostClient {
         while ((line = rd.readLine()) != null) {
             result.append(line);
         }
+        System.out.println(result.toString());
         return TrainsMapper.toDto(result.toString());
     }
 
