@@ -28,10 +28,10 @@ public class TrainsMapperTest {
         }
 
         TrainsMapper trainsMapper = new TrainsMapper();
-        Data trains = trainsMapper.toDto(json);
+        entity.trainsUPD.Trains trains = trainsMapper.toDto(json);
 
         assertNotNull(trains);
-        assertEquals(6, trains.getTrains().size());
+        assertEquals(6, trains.getData());
         //assertEquals("Сидячий другого класу", trains.getValue().get(0).getTypes().get(0).getTitle());
 
 

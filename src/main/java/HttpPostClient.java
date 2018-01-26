@@ -1,6 +1,4 @@
-import entity.trains.Trains;
-import entity.trains.Value;
-import entity.trainsUPD.Data;
+import entity.trainsUPD.Trains;
 import mappers.TrainsMapper;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -29,7 +27,7 @@ public class HttpPostClient {
         System.out.println("Start: ");
 
 
-        Data trains = null;
+        Trains trains = null;
 
         boolean flag = true;
 
@@ -39,7 +37,7 @@ public class HttpPostClient {
             try {
                 trains = httpPostClient.sendPost(fromStation, toStation, date);
 
-                if (trains!=null && !trains.getTrains().get(0).getNum().equals("013К")){
+                if (trains!=null && !trains.getData().equals("013К")){
                     System.out.println("Trains was found");
 
                     //JOptionPane.showMessageDialog(null, "Buy!","", JOptionPane.ERROR_MESSAGE);
@@ -67,7 +65,7 @@ public class HttpPostClient {
     }
 
     // HTTP POST request
-    private Data sendPost(String fromStation, String toStation, String date) throws Exception {
+    private Trains sendPost(String fromStation, String toStation, String date) throws Exception {
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(URL);
 

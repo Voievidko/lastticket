@@ -1,10 +1,14 @@
 package entity.trainsUPD;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.annotate.JsonValue;
+import org.codehaus.jackson.map.annotate.JsonRootName;
 
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonRootName(value = "list")
 public class Train {
     private String num;
     private int category;
@@ -17,6 +21,7 @@ public class Train {
     private int allowBooking;
     private int allowRoundtrip;
     private int isEurope;
+
 
     public Train() {
     }
@@ -32,6 +37,94 @@ public class Train {
         this.allowStud = allowStud;
         this.allowBooking = allowBooking;
         this.allowRoundtrip = allowRoundtrip;
+        this.isEurope = isEurope;
+    }
+
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
+    }
+
+    public String getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTime(String travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    public From getFrom() {
+        return from;
+    }
+
+    public void setFrom(From from) {
+        this.from = from;
+    }
+
+    public To getTo() {
+        return to;
+    }
+
+    public void setTo(To to) {
+        this.to = to;
+    }
+
+    public List<Type> getTypes() {
+        return types;
+    }
+
+    public void setTypes(List<Type> types) {
+        this.types = types;
+    }
+
+    public Child getChild() {
+        return child;
+    }
+
+    public void setChild(Child child) {
+        this.child = child;
+    }
+
+    public int getAllowStud() {
+        return allowStud;
+    }
+
+    public void setAllowStud(int allowStud) {
+        this.allowStud = allowStud;
+    }
+
+    public int getAllowBooking() {
+        return allowBooking;
+    }
+
+    public void setAllowBooking(int allowBooking) {
+        this.allowBooking = allowBooking;
+    }
+
+    public int getAllowRoundtrip() {
+        return allowRoundtrip;
+    }
+
+    public void setAllowRoundtrip(int allowRoundtrip) {
+        this.allowRoundtrip = allowRoundtrip;
+    }
+
+    public int getIsEurope() {
+        return isEurope;
+    }
+
+    public void setIsEurope(int isEurope) {
         this.isEurope = isEurope;
     }
 }

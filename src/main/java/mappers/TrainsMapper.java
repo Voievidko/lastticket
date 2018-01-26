@@ -1,6 +1,7 @@
 package mappers;
 
 import entity.trainsUPD.Data;
+import entity.trainsUPD.Trains;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.map.JsonMappingException;
@@ -10,13 +11,13 @@ import java.io.IOException;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TrainsMapper {
-    public static Data toDto(String input){
+    public static Trains toDto(String input){
 
-        Data trains = null;
+        Trains trains = null;
         ObjectMapper mapper = new ObjectMapper();
 
         try{
-            trains = mapper.readValue(input, Data.class);
+            trains = mapper.readValue(input, Trains.class);
         } catch (JsonParseException e) {
             e.printStackTrace();
         } catch (JsonMappingException e) {
