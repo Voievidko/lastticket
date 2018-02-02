@@ -37,7 +37,7 @@ public class HttpPostClient {
             try {
                 trains = httpPostClient.sendPost(fromStation, toStation, date);
 
-                if (trains!=null && !trains.getData().equals("013К")){
+                if (trains.getData().getTrains().get(0).getTypes().size()>0){
                     System.out.println("Trains was found");
 
                     //JOptionPane.showMessageDialog(null, "Buy!","", JOptionPane.ERROR_MESSAGE);

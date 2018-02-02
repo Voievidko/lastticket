@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class UpdatedTrainsMapperTest {
-    private static final String PATH = "src/main/resources/updatedAnswer.json";
+    private static final String PATH = "src/main/resources/updatedsmall.json";
 
 
     @Test
@@ -34,6 +34,7 @@ public class UpdatedTrainsMapperTest {
 
         assertNotNull(trains);
         assertEquals(1, trains.getData().getTrains().size());
+        assertEquals("049К",trains.getData().getTrains().get(0).getNum());
 
 //        assertEquals(20,trains.getData().getTrains().size());
 //        assertEquals("007Л",trains.getData().getTrains().get(2).getNum());
