@@ -1,3 +1,4 @@
+import entity.trainsUPD.Train;
 import entity.trainsUPD.Trains;
 import mappers.TrainsMapper;
 import org.apache.http.HttpResponse;
@@ -53,7 +54,9 @@ public class HttpPostClient {
                     return;
                 } else {
                     int sleepTime = getDelay();
-                    System.out.println("There no trains now. Delay: " + (double)sleepTime/1000 + " seconds");
+                    System.out.print("There no trains now. Delay: " + (double)sleepTime/1000 + " seconds; ");
+                    System.out.print("Total numbers of trains: " + trains.getData().getTrains().size() + "; ");
+                    System.out.println("Numbers: " + getNumbersOfTrainsInIneLine(trains));
 
                     Thread.sleep(sleepTime);
 
@@ -75,22 +78,15 @@ public class HttpPostClient {
         List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
         urlParameters.add(new BasicNameValuePair("from", fromStationCode));
         urlParameters.add(new BasicNameValuePair("to", toStationCode));
-//        urlParameters.add(new BasicNameValuePair("station_from", ""));
-//        urlParameters.add(new BasicNameValuePair("station_till", ""));
         urlParameters.add(new BasicNameValuePair("date", date));
         urlParameters.add(new BasicNameValuePair("time", "00:00"));
-//        urlParameters.add(new BasicNameValuePair("time_dep_till", ""));
         urlParameters.add(new BasicNameValuePair("another_ec", "0"));
-        //urlParameters.add(new BasicNameValuePair("search", ""));
 
 
         post.setEntity(new UrlEncodedFormEntity(urlParameters, "UTF-8"));
 
 
         HttpResponse response = client.execute(post);
-
-        //System.out.println(response.toString());
-
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
 
@@ -99,12 +95,20 @@ public class HttpPostClient {
         while ((line = rd.readLine()) != null) {
             result.append(line);
         }
-        System.out.println(result.toString());
+//        System.out.println(result.toString());
         return TrainsMapper.toDto(result.toString());
     }
 
     private int getDelay(){
         Random rnd = new Random();
         return  (int)(5000 + 10000 * rnd.nextDouble());
+    }
+
+    private String getNumbersOfTrainsInIneLine(Trains trains){
+        String str = "";
+        for(Train train : trains.getData().getTrains()){
+            str += train.getNum() + "; ";
+        }
+        return str;
     }
 }

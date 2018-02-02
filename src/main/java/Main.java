@@ -25,7 +25,7 @@ public class Main {
 //        System.out.println();
 //        System.out.println();
         String from = "Київ";
-        String to = "Самбір";
+        String to = "Львів";
         String dateTo = "2018-02-02";
         //String dateFrom = "08.01.2018";
 
