@@ -1,0 +1,45 @@
+{
+  "data":{
+    "list":[
+      {
+        "num":"049К",
+        "category":0,
+        "travelTime":"10:03",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"п'ятниця, 02.02.2018",
+          "time":"20:12",
+          "sortTime":1517595120,
+          "srcDate":"2018-02-02"
+        },
+        "to":{
+          "code":"2218005",
+          "station":"Самбір",
+          "stationTrain":"Трускавець",
+          "date":"субота, 03.02.2018",
+          "time":"06:15",
+          "sortTime":1517631300
+        },
+        "types":[
+          {
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":2
+          }
+        ],
+        "child":{
+          "minDate":"2004-02-03",
+          "maxDate":"2018-02-02"
+        },
+        "allowStud":1,
+        "allowBooking":1,
+        "allowRoundtrip":1,
+        "isEurope":0,
+        "noReserve":1
+      }
+    ]
+  }
+}

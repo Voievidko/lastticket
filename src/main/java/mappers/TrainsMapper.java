@@ -21,8 +21,8 @@ public class TrainsMapper {
         } catch (JsonParseException e) {
             e.printStackTrace();
         } catch (JsonMappingException e) {
-            return null;
-//            e.printStackTrace();
+            //return null;
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

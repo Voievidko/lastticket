@@ -21,12 +21,13 @@ public class Train {
     private int allowBooking;
     private int allowRoundtrip;
     private int isEurope;
+    private int noReserve;
 
 
     public Train() {
     }
 
-    public Train(String num, int category, String travelTime, From from, To to, List<Type> types, Child child, int allowStud, int allowBooking, int allowRoundtrip, int isEurope) {
+    public Train(String num, int category, String travelTime, From from, To to, List<Type> types, Child child, int allowStud, int allowBooking, int allowRoundtrip, int isEurope, int noReserve) {
         this.num = num;
         this.category = category;
         this.travelTime = travelTime;
@@ -38,6 +39,7 @@ public class Train {
         this.allowBooking = allowBooking;
         this.allowRoundtrip = allowRoundtrip;
         this.isEurope = isEurope;
+        this.noReserve = noReserve;
     }
 
     public String getNum() {
@@ -126,5 +128,13 @@ public class Train {
 
     public void setIsEurope(int isEurope) {
         this.isEurope = isEurope;
+    }
+
+    public int getNoReserve() {
+        return noReserve;
+    }
+
+    public void setNoReserve(int noReserve) {
+        this.noReserve = noReserve;
     }
 }

@@ -1,5 +1,8 @@
 package entity.trainsUPD;
 
+import org.codehaus.jackson.map.annotate.JsonRootName;
+
+@JsonRootName(value = "list")
 public class Trains {
     private Data data;
 
