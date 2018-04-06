@@ -50,14 +50,4 @@ public class Type {
     public void setPlaces(int places) {
         this.places = places;
     }
-
-    @Override
-    public String toString() {
-        return "Type{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", letter='" + letter + '\'' +
-                ", places=" + places +
-                '}';
-    }
 }

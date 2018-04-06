@@ -1,4 +1,4 @@
-package entity.trainsUPD;
+package entity.trains;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 

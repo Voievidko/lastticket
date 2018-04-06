@@ -1,28 +1,26 @@
-package entity.trainsUPD;
+package entity.trains;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class From {
+public class To {
     private String code;
     private String station;
     private String stationTrain;
     private String date;
     private String time;
     private int sortTime;
-    private String srcDate;
 
-    public From() {
+    public To() {
     }
 
-    public From(String code, String station, String stationTrain, String date, String time, int sortTime, String srcDate) {
+    public To(String code, String station, String stationTrain, String date, String time, int sortTime) {
         this.code = code;
         this.station = station;
         this.stationTrain = stationTrain;
         this.date = date;
         this.time = time;
         this.sortTime = sortTime;
-        this.srcDate = srcDate;
     }
 
     public String getCode() {
@@ -71,13 +69,5 @@ public class From {
 
     public void setSortTime(int sortTime) {
         this.sortTime = sortTime;
-    }
-
-    public String getSrcDate() {
-        return srcDate;
-    }
-
-    public void setSrcDate(String srcDate) {
-        this.srcDate = srcDate;
     }
 }

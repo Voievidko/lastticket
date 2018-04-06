@@ -1,5 +1,6 @@
-import entity.trainsUPD.Train;
-import entity.trainsUPD.Trains;
+import entity.trains.Train;
+import entity.trains.Trains;
+import entity.trains.Type;
 import mappers.TrainsMapper;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -18,8 +19,10 @@ import java.util.Random;
 
 public class HttpPostClient {
     private final String URL = "https://booking.uz.gov.ua/train_search/";
+    private final int DELAY_MIN = 5000; //ms
+    private final int DELAY_DELTA = 10000; //ms
 
-    public void searchTicketWithDelay(String fromStation, String toStation, String date){
+    public void searchTicketWithDelay(String fromStation, String toStation, String date, List<String> neededTrains){
         HttpPostClient httpPostClient = new HttpPostClient();
 
         System.out.println("Code for " + fromStation + ": " + CityPicker.getCityCode(fromStation));
@@ -38,8 +41,10 @@ public class HttpPostClient {
             try {
                 trains = httpPostClient.sendPost(fromStation, toStation, date);
 
-                if (trains.getData().getTrains().get(0).getTypes().size()>0){
+                int numberOfPlaces = 0;
+                if ((numberOfPlaces = ifPlaceExist(trains, neededTrains)) > 0){
                     System.out.println("Trains was found");
+                    System.out.println("Number of places: " + numberOfPlaces);
 
                     //JOptionPane.showMessageDialog(null, "Buy!","", JOptionPane.ERROR_MESSAGE);
 
@@ -54,9 +59,12 @@ public class HttpPostClient {
                     return;
                 } else {
                     int sleepTime = getDelay();
-                    System.out.print("There no trains now. Delay: " + (double)sleepTime/1000 + " seconds; ");
-                    System.out.print("Total numbers of trains: " + trains.getData().getTrains().size() + "; ");
-                    System.out.println("Numbers: " + getNumbersOfTrainsInIneLine(trains));
+                    System.out.println("There no trains now");
+                    System.out.println("        Delay: " + (double)sleepTime/1000 + " seconds; ");
+                    System.out.println("        Total numbers of trains: " + trains.getData().getTrains().size() + "; ");
+                    System.out.println("        Numbers: " + trains.getNumbersOfTrainsInOneLine());
+                    System.out.println("        Search in scope: " + neededTrains);
+                    System.out.println();
 
                     Thread.sleep(sleepTime);
 
@@ -65,6 +73,27 @@ public class HttpPostClient {
                 e.printStackTrace();
             }
         }
+    }
+
+    private int ifPlaceExist(Trains trains, List<String> neededTrains){
+        int places = 0;
+        for (Train train : trains.getData().getTrains()){
+            for (Type type : train.getTypes()){
+                if (numberOfTrainsChecker(train, neededTrains)){
+                    places += type.getPlaces();
+                }
+            }
+        }
+        return places;
+    }
+
+    private boolean numberOfTrainsChecker (Train train, List<String> neededTrains){
+        for (String numberOfTrains : neededTrains){
+            if (train.getNum().equalsIgnoreCase(numberOfTrains)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // HTTP POST request
@@ -95,20 +124,11 @@ public class HttpPostClient {
         while ((line = rd.readLine()) != null) {
             result.append(line);
         }
-//        System.out.println(result.toString());
         return TrainsMapper.toDto(result.toString());
     }
 
     private int getDelay(){
         Random rnd = new Random();
-        return  (int)(5000 + 10000 * rnd.nextDouble());
-    }
-
-    private String getNumbersOfTrainsInIneLine(Trains trains){
-        String str = "";
-        for(Train train : trains.getData().getTrains()){
-            str += train.getNum() + "; ";
-        }
-        return str;
+        return  (int)(DELAY_MIN + DELAY_DELTA * rnd.nextDouble());
     }
 }

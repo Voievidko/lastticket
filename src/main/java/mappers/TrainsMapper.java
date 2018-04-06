@@ -1,7 +1,6 @@
 package mappers;
 
-import entity.trainsUPD.Data;
-import entity.trainsUPD.Trains;
+import entity.trains.Trains;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.map.JsonMappingException;

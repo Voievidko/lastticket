@@ -1,7 +1,5 @@
 package mappers;
 
-import entity.trains.Trains;
-import entity.trainsUPD.Data;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -28,7 +26,7 @@ public class TrainsMapperTest {
         }
 
         TrainsMapper trainsMapper = new TrainsMapper();
-        entity.trainsUPD.Trains trains = trainsMapper.toDto(json);
+        entity.trains.Trains trains = trainsMapper.toDto(json);
 
         assertNotNull(trains);
         assertEquals(6, trains.getData());

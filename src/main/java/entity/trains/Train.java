@@ -1,9 +1,6 @@
-package entity.trainsUPD;
+package entity.trains;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.annotate.JsonProperty;
-import org.codehaus.jackson.annotate.JsonValue;
-import org.codehaus.jackson.map.annotate.JsonRootName;
 
 import java.util.List;
 

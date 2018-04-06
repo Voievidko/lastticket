@@ -1,6 +1,6 @@
 package mappers;
 
-import entity.trainsUPD.Trains;
+import entity.trains.Trains;
 import org.junit.Test;
 
 import java.io.BufferedReader;
