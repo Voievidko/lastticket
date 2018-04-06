@@ -30,12 +30,8 @@ public class HttpPostClient {
 
         System.out.println("Start: ");
 
-
         Trains trains = null;
-
         boolean flag = true;
-
-
 
         while (flag){
             try {
@@ -46,13 +42,10 @@ public class HttpPostClient {
                     System.out.println("Trains was found");
                     System.out.println("Number of places: " + numberOfPlaces);
 
-                    //JOptionPane.showMessageDialog(null, "Buy!","", JOptionPane.ERROR_MESSAGE);
-
                     JOptionPane pane = new JOptionPane("Tickets was found");
                     JDialog dialog = pane.createDialog("Buy!");
                     dialog.setAlwaysOnTop(true);
                     dialog.show();
-
 
                     flag = false;
                     System.exit(0);
@@ -67,7 +60,6 @@ public class HttpPostClient {
                     System.out.println();
 
                     Thread.sleep(sleepTime);
-
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -88,6 +80,7 @@ public class HttpPostClient {
     }
 
     private boolean numberOfTrainsChecker (Train train, List<String> neededTrains){
+        if (neededTrains == null || neededTrains.isEmpty()) return true;
         for (String numberOfTrains : neededTrains){
             if (train.getNum().equalsIgnoreCase(numberOfTrains)) {
                 return true;

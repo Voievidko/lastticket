@@ -1,12 +1,5 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import entity.trains.From;
-import entity.trains.Value;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
 
 /**
  * Created by voievidko_ri on 26.10.2017.
@@ -21,7 +14,7 @@ public class Main {
 //        String from = scanner.nextLine();
 //        System.out.print("To station (in ukrainian): ");
 //        String to = scanner.nextLine();
-//        System.out.print( "Date (in format DD.MM.YYYY): " );
+//        System.out.print( "Date (in format YYYY-MM-DD): " );
 //        String date = scanner.nextLine();
 //        System.out.println();
 //        System.out.println();
@@ -36,12 +29,10 @@ public class Main {
 
         String from = "Київ";
         String to = "Хмельницький";
-        String dateTo = "2018-04-06";
-
-        //String dateFrom = "08.01.2018";
+        String date = "2018-04-06"; //YYYY-MM-DD
 
         HttpPostClient httpPostClient = new HttpPostClient();
-        httpPostClient.searchTicketWithDelay(from, to, dateTo, trainNumbers);
+        httpPostClient.searchTicketWithDelay(from, to, date, trainNumbers);
 
 
     }
