@@ -1,11 +1,6 @@
 package mappers;
 
 import entity.city.City;
-import entity.trains.Trains;
-import org.codehaus.jackson.JsonFactory;
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.JsonParser;
-import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
@@ -13,8 +8,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class CityMapper {
+    private CityMapper(){
+        throw new IllegalArgumentException("Utility class");
+    }
+
     public static List<City> toDto(String input){
-        String json = input.substring(input.indexOf('['), input.indexOf(']') + 1);
+        String json = trimParentheses(input);
         ObjectMapper mapper = new ObjectMapper();
 
         List<City> city  = null;
@@ -24,5 +23,9 @@ public class CityMapper {
             e.printStackTrace();
         }
         return city;
+    }
+
+    private static String trimParentheses(String input){
+        return input.substring(input.indexOf('['), input.indexOf(']') + 1);
     }
 }

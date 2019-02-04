@@ -24,7 +24,8 @@ public class Train {
     public Train() {
     }
 
-    public Train(String num, int category, String travelTime, From from, To to, List<Type> types, Child child, int allowStud, int allowBooking, int allowRoundtrip, int isEurope, int noReserve) {
+    public Train(String num, int category, String travelTime, From from, To to, List<Type> types,
+                 Child child, int allowStud, int allowBooking, int allowRoundtrip, int isEurope, int noReserve) {
         this.num = num;
         this.category = category;
         this.travelTime = travelTime;

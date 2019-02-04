@@ -28,9 +28,7 @@ public class TrainsMapperTest {
             e.printStackTrace();
         }
 
-        TrainsMapper trainsMapper = new TrainsMapper();
-
-        Trains trains = trainsMapper.toDto(json);
+        Trains trains = TrainsMapper.toDto(json);
 
         assertNotNull(trains);
         assertEquals(1, trains.getData().getTrains().size());

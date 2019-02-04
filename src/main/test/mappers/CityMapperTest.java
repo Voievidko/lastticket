@@ -29,8 +29,7 @@ public class CityMapperTest {
             e.printStackTrace();
         }
 
-        CityMapper cityMapper = new CityMapper();
-        List<City> trains = cityMapper.toDto(json);
+        List<City> trains = CityMapper.toDto(json);
 
         assertNotNull(trains);
     }
