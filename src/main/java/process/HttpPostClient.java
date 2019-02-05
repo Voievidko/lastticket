@@ -23,6 +23,8 @@ public class HttpPostClient {
 
     private final static String SEARCH_TRAINS_URL = "https://booking.uz.gov.ua/train_search/";
     private final static String SEARCH_CITY_URL = "https://booking.uz.gov.ua/train_search/station/?term=";
+    private final static String SEARCH_ALL_WAGONS_BY_TYPE = "https://booking.uz.gov.ua/train_wagons/";
+    private final static String SEARCH_WAGON_URL = "https://booking.uz.gov.ua/train_wagon/";
 
     static String getCityListFromUZServer(String cityName){
         try {
@@ -68,5 +70,70 @@ public class HttpPostClient {
             e.printStackTrace();
         }
         return TrainsMapper.toDto(result.toString()).getData().getTrains();
+    }
+
+    void requestAllAvaliableWagonNumbersByType(String cityCodeFrom, String cityCodeTo, String date, String trainNum,
+                                               String wagonTypeId){
+        StringBuilder result = new StringBuilder();
+        try {
+            HttpClient client = HttpClients.createDefault();
+            HttpPost post = new HttpPost(SEARCH_ALL_WAGONS_BY_TYPE);
+
+            List<NameValuePair> urlParameters = new ArrayList<>();
+            urlParameters.add(new BasicNameValuePair("from", cityCodeFrom));
+            urlParameters.add(new BasicNameValuePair("to", cityCodeTo));
+            urlParameters.add(new BasicNameValuePair("train", trainNum));
+            urlParameters.add(new BasicNameValuePair("date", date));
+            urlParameters.add(new BasicNameValuePair("wagon_type_id", wagonTypeId));
+
+            post.setEntity(new UrlEncodedFormEntity(urlParameters, "UTF-8"));
+
+
+            HttpResponse response = client.execute(post);
+            BufferedReader rd = new BufferedReader(
+                    new InputStreamReader(response.getEntity().getContent()));
+
+            String line = "";
+            while ((line = rd.readLine()) != null) {
+                result.append(line);
+            }
+            System.out.println(result);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    void requestAllAvaliablePlacesInWagon(String cityCodeFrom, String cityCodeTo, String date, String trainNum,
+                                          String wagonNum, String wagonType){
+        StringBuilder result = new StringBuilder();
+        try {
+            HttpClient client = HttpClients.createDefault();
+            HttpPost post = new HttpPost(SEARCH_WAGON_URL);
+
+            List<NameValuePair> urlParameters = new ArrayList<>();
+            urlParameters.add(new BasicNameValuePair("from", cityCodeFrom));
+            urlParameters.add(new BasicNameValuePair("to", cityCodeTo));
+            urlParameters.add(new BasicNameValuePair("train", trainNum));
+            urlParameters.add(new BasicNameValuePair("date", date));
+            urlParameters.add(new BasicNameValuePair("wagon_num", wagonNum));
+            urlParameters.add(new BasicNameValuePair("wagon_type", wagonType));
+
+            post.setEntity(new UrlEncodedFormEntity(urlParameters, "UTF-8"));
+
+
+            HttpResponse response = client.execute(post);
+            BufferedReader rd = new BufferedReader(
+                    new InputStreamReader(response.getEntity().getContent()));
+
+            String line = "";
+            while ((line = rd.readLine()) != null) {
+                result.append(line);
+            }
+            System.out.println(result);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }

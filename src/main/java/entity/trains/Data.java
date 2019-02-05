@@ -13,7 +13,6 @@ public class Data {
     public Data() {
     }
 
-
     public Data(List<Train> trains) {
         this.trains = trains;
     }

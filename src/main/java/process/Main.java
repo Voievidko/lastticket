@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    /*
     public static void main(String[] args) {
 
 //        Scanner scanner = new Scanner( System.in);
@@ -40,5 +41,23 @@ public class Main {
                 .numberOfTickets(placeNumber)
                 .build();
         trainProcessor.proceed();
+    }
+    */
+    public static void main(String[] args) {
+        HttpPostClient httpPostClient = new HttpPostClient();
+        httpPostClient.requestAllAvaliableWagonNumbersByType("2200001", "2218000", "2019-02-05",
+                "049К", "П");
+//        httpPostClient.requestAllAvaliablePlacesInWagon("2200001", "2218000", "2019-02-05",
+//                "049К", "1", "П");
+
+        /*from: 2200001
+        to: 2218005
+        train: 049К
+        date: 2019-02-05
+        wagon_num: 1
+        wagon_type: П
+        wagon_class: Б
+        cached_scheme[]: П01
+        */
     }
 }
