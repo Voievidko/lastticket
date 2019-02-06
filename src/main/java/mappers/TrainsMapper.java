@@ -1,12 +1,10 @@
 package mappers;
 
 import entity.trains.Trains;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class TrainsMapper {
 
     private TrainsMapper (){

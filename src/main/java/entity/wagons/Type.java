@@ -14,14 +14,6 @@ public class Type {
     public Type() {
     }
 
-    public Type(String typeId, String title, int free, int cost, boolean isOneCost) {
-        this.typeId = typeId;
-        this.title = title;
-        this.free = free;
-        this.cost = cost;
-        this.isOneCost = isOneCost;
-    }
-
     @JsonProperty("type_id")
     public String getTypeId() {
         return typeId;

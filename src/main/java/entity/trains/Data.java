@@ -13,16 +13,11 @@ public class Data {
     public Data() {
     }
 
-    public Data(List<Train> trains) {
-        this.trains = trains;
-    }
-
     @JsonProperty("list")
     public List<Train> getTrains() {
         return trains;
     }
 
-    @JsonProperty("list")
     public void setTrains(List<Train> trains) {
         this.trains = trains;
     }

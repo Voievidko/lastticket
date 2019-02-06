@@ -15,16 +15,6 @@ public class From {
     public From() {
     }
 
-    public From(String code, String station, String stationTrain, String date, String time, int sortTime, String srcDate) {
-        this.code = code;
-        this.station = station;
-        this.stationTrain = stationTrain;
-        this.date = date;
-        this.time = time;
-        this.sortTime = sortTime;
-        this.srcDate = srcDate;
-    }
-
     public String getCode() {
         return code;
     }

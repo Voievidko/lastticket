@@ -5,7 +5,6 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-//@JsonRootName(value = "list")
 public class Train {
     private String num;
     private int category;
@@ -20,24 +19,7 @@ public class Train {
     private int isEurope;
     private int noReserve;
 
-
     public Train() {
-    }
-
-    public Train(String num, int category, String travelTime, From from, To to, List<Type> types,
-                 Child child, int allowStud, int allowBooking, int allowRoundtrip, int isEurope, int noReserve) {
-        this.num = num;
-        this.category = category;
-        this.travelTime = travelTime;
-        this.from = from;
-        this.to = to;
-        this.types = types;
-        this.child = child;
-        this.allowStud = allowStud;
-        this.allowBooking = allowBooking;
-        this.allowRoundtrip = allowRoundtrip;
-        this.isEurope = isEurope;
-        this.noReserve = noReserve;
     }
 
     public String getNum() {

@@ -10,11 +10,6 @@ public class Child {
     public Child() {
     }
 
-    public Child(String minDate, String maxDate) {
-        this.minDate = minDate;
-        this.maxDate = maxDate;
-    }
-
     public String getMinDate() {
         return minDate;
     }

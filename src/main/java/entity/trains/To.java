@@ -14,15 +14,6 @@ public class To {
     public To() {
     }
 
-    public To(String code, String station, String stationTrain, String date, String time, int sortTime) {
-        this.code = code;
-        this.station = station;
-        this.stationTrain = stationTrain;
-        this.date = date;
-        this.time = time;
-        this.sortTime = sortTime;
-    }
-
     public String getCode() {
         return code;
     }

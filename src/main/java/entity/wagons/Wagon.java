@@ -26,25 +26,6 @@ public class Wagon {
     public Wagon() {
     }
 
-    public Wagon(int num, String typeId, String type, String wagonClass, int railway, int free, boolean byWishes,
-                 boolean hasBedding, boolean obligatoryBedding, List<String> services,
-                 Map<String, Integer> prices, int reservePrice, boolean allowBonus, String air) {
-        this.num = num;
-        this.typeId = typeId;
-        this.type = type;
-        this.wagonClass = wagonClass;
-        this.railway = railway;
-        this.free = free;
-        this.byWishes = byWishes;
-        this.hasBedding = hasBedding;
-        this.obligatoryBedding = obligatoryBedding;
-        this.services = services;
-        this.prices = prices;
-        this.reservePrice = reservePrice;
-        this.allowBonus = allowBonus;
-        this.air = air;
-    }
-
     public int getNum() {
         return num;
     }

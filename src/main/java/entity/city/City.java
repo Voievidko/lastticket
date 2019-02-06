@@ -11,12 +11,6 @@ public class City {
     public City() {
     }
 
-    public City(String title, String region, String value) {
-        this.title = title;
-        this.region = region;
-        this.value = value;
-    }
-
     public String getTitle() {
         return title;
     }

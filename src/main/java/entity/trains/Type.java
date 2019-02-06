@@ -12,13 +12,6 @@ public class Type {
     public Type() {
     }
 
-    public Type(String id, String title, String letter, int places) {
-        this.id = id;
-        this.title = title;
-        this.letter = letter;
-        this.places = places;
-    }
-
     public String getId() {
         return id;
     }
