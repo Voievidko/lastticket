@@ -57,6 +57,7 @@ public class TrainProcessor {
             trainProcessor.from = this.from;
             trainProcessor.to = this.to;
             trainProcessor.date = this.date;
+
             if (trainNumbers == null) {
                 trainNumbers = new ArrayList<>();
             } else {
@@ -118,10 +119,12 @@ public class TrainProcessor {
         while (flag){
             try {
                 trains = httpPostClient.sendPost(cityCodeFrom, cityCodeTo, date);
+                if (trains == null){
+                    throw new IllegalArgumentException("Data with trains info is null.");
+                }
 
                 if (isCorrectPlaceExist(trains)){
                     trainPrinter.printTicketsFoundMessage();
-//                    System.out.println("Number of places: " + numberOfPlaces);
                     trainPrinter.showPopUpMessage();
                     flag = false;
                     System.exit(0);
@@ -180,6 +183,16 @@ public class TrainProcessor {
 
     private int getDelay(){
         Random rnd = new Random();
-        return  (int)(DELAY_MIN + DELAY_DELTA * rnd.nextDouble());
+        return (int)(DELAY_MIN + DELAY_DELTA * rnd.nextDouble());
     }
+
+//    private boolean dateValidation() throws IllegalFormatException, IllegalStateException {
+//        //Validate format
+
+          //Validate logic
+//        Integer year = Integer.parseInt(date.substring(0, 4));
+//        Integer month = Integer.parseInt(date.substring(5, 7));
+//        Integer day = Integer.parseInt(date.substring(8, 10));
+//        LocalDate localDate = LocalDate.now();
+//    }
 }
