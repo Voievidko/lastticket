@@ -1,15 +1,18 @@
 package entity.wagons;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.map.annotate.JsonRootName;
 
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Data {
+@JsonRootName(value = "data")
+public class Wagons {
     private List<Type> types;
     private List<Wagon> wagons;
+    private String tplPage;
 
-    public Data() {
+    public Wagons() {
     }
 
     public List<Type> getTypes() {
@@ -26,5 +29,13 @@ public class Data {
 
     public void setWagons(List<Wagon> wagons) {
         this.wagons = wagons;
+    }
+
+    public String getTplPage() {
+        return tplPage;
+    }
+
+    public void setTplPage(String tplPage) {
+        this.tplPage = tplPage;
     }
 }

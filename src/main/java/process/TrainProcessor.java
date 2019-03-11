@@ -120,7 +120,7 @@ public class TrainProcessor {
             try {
                 trains = httpPostClient.sendPost(cityCodeFrom, cityCodeTo, date);
                 if (trains == null){
-                    throw new IllegalArgumentException("Data with trains info is null.");
+                    throw new IllegalArgumentException("Wagons with trains info is null.");
                 }
 
                 if (isCorrectPlaceExist(trains)){
