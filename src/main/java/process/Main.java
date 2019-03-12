@@ -23,15 +23,15 @@ public class Main {
 
 
         List<String> neededTypes = new ArrayList();
-//        neededTypes.add("Л");
-        neededTypes.add("П");
+        neededTypes.add("Л");
+//        neededTypes.add("П");
 //        neededTypes.add("К");
 
         int placeNumber = 1;
 
         String from = "Івано-Франківськ";
         String to = "Київ";
-        String date = "2019-02-08"; //YYYY-MM-DD
+        String date = "2019-03-20"; //YYYY-MM-DD
 
 
         TrainProcessor trainProcessor = new TrainProcessor.Builder(from, to, date)

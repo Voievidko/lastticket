@@ -1,839 +1,987 @@
 {
-  "data": {
-    "trains": [
+  "data":{
+    "list":[
       {
-        "num": "043Л",
-        "category": 0,
-        "travelTime": "7:45",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Івано-Франківськ",
-          "date": "понеділок, 12.02.2018",
-          "time": "01:01",
-          "sortTime": 1518390060,
-          "srcDate": "2018-02-12"
+        "num":"015К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"6:22",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Харків-Пас",
+          "date":"середа, 03.04.2019",
+          "time":"01:17",
+          "sortTime":1554243420,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "08:46",
-          "sortTime": 1518417960
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"07:39",
+          "sortTime":1554266340
         },
-        "types": [],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "045Л",
-        "category": 0,
-        "travelTime": "9:46",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Ужгород",
-          "date": "понеділок, 12.02.2018",
-          "time": "02:00",
-          "sortTime": 1518393600,
-          "srcDate": "2018-02-12"
+        "num":"015О",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"6:22",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Харків-Пас",
+          "date":"середа, 03.04.2019",
+          "time":"01:17",
+          "sortTime":1554243420,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Лисичанськ",
-          "date": "понеділок, 12.02.2018",
-          "time": "11:46",
-          "sortTime": 1518428760
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"07:39",
+          "sortTime":1554266340
         },
-        "types": [
+        "types":[
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 2
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":15
+          },
+          {
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":22
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "007Л",
-        "category": 0,
-        "travelTime": "6:44",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Івано-Франківськ",
-          "date": "понеділок, 12.02.2018",
-          "time": "02:20",
-          "sortTime": 1518394800,
-          "srcDate": "2018-02-12"
+        "num":"111О",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"11:11",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Харків-Пас",
+          "date":"середа, 03.04.2019",
+          "time":"05:15",
+          "sortTime":1554257700,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "09:04",
-          "sortTime": 1518419040
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"16:26",
+          "sortTime":1554297960
         },
-        "types": [
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 12
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":9
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 1
+            "id":"П",
+            "title":"Плацкарт",
+            "letter":"П",
+            "places":12
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "029Л",
-        "category": 0,
-        "travelTime": "7:05",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Ужгород",
-          "date": "понеділок, 12.02.2018",
-          "time": "03:11",
-          "sortTime": 1518397860,
-          "srcDate": "2018-02-12"
+        "num":"073А",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"9:38",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Москва Киевская",
+          "date":"середа, 03.04.2019",
+          "time":"05:38",
+          "sortTime":1554259080,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "10:16",
-          "sortTime": 1518423360
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"15:16",
+          "sortTime":1554293760
         },
-        "types": [
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
+        },
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
+      },
+      {
+        "num":"705К",
+        "category":1,
+        "isTransformer":0,
+        "travelTime":"5:09",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"06:00",
+          "sortTime":1554260400,
+          "srcDate":"2019-04-03"
+        },
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Пшемисль",
+          "date":"середа, 03.04.2019",
+          "time":"11:09",
+          "sortTime":1554278940
+        },
+        "types":[
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 4
+            "id":"С1",
+            "title":"Сидячий першого класу",
+            "letter":"С1",
+            "places":98
+          },
+          {
+            "id":"С2",
+            "title":"Сидячий другого класу",
+            "letter":"С2",
+            "places":269
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "013Л",
-        "category": 0,
-        "travelTime": "9:58",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Солотвино 1",
-          "date": "понеділок, 12.02.2018",
-          "time": "03:46",
-          "sortTime": 1518399960,
-          "srcDate": "2018-02-12"
+        "num":"715К",
+        "category":1,
+        "isTransformer":0,
+        "travelTime":"6:55",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"06:50",
+          "sortTime":1554263400,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "13:44",
-          "sortTime": 1518435840
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Пшемисль",
+          "date":"середа, 03.04.2019",
+          "time":"13:45",
+          "sortTime":1554288300
         },
-        "types": [
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 34
+            "id":"С1",
+            "title":"Сидячий першого класу",
+            "letter":"С1",
+            "places":104
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 32
-          },
-          {
-            "id": "П",
-            "title": "Плацкарт",
-            "letter": "П",
-            "places": 18
+            "id":"С2",
+            "title":"Сидячий другого класу",
+            "letter":"С2",
+            "places":285
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "744Л",
-        "category": 1,
-        "travelTime": "5:08",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Львів",
-          "date": "понеділок, 12.02.2018",
-          "time": "06:07",
-          "sortTime": 1518408420,
-          "srcDate": "2018-02-12"
+        "num":"142П",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"14:54",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Бахмут",
+          "date":"середа, 03.04.2019",
+          "time":"13:36",
+          "sortTime":1554287760,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Дарниця",
-          "date": "понеділок, 12.02.2018",
-          "time": "11:15",
-          "sortTime": 1518426900
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"четвер, 04.04.2019",
+          "time":"04:30",
+          "sortTime":1554341400
         },
-        "types": [
+        "types":[
           {
-            "id": "С1",
-            "title": "Сидячий першого класу",
-            "letter": "С1",
-            "places": 166
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":14
           },
           {
-            "id": "С2",
-            "title": "Сидячий другого класу",
-            "letter": "С2",
-            "places": 402
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":64
+          },
+          {
+            "id":"П",
+            "title":"Плацкарт",
+            "letter":"П",
+            "places":66
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "074Л",
-        "category": 0,
-        "travelTime": "8:47",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Львів",
-          "date": "понеділок, 12.02.2018",
-          "time": "10:01",
-          "sortTime": 1518422460,
-          "srcDate": "2018-02-12"
+        "num":"749К",
+        "category":2,
+        "isTransformer":1,
+        "travelTime":"5:50",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"14:07",
+          "sortTime":1554289620,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Москва Киевская",
-          "date": "понеділок, 12.02.2018",
-          "time": "18:48",
-          "sortTime": 1518454080
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"19:57",
+          "sortTime":1554310620
         },
-        "types": [],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
-        },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
-      },
-      {
-        "num": "749П",
-        "category": 0,
-        "travelTime": "5:44",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Івано-Франківськ",
-          "date": "понеділок, 12.02.2018",
-          "time": "11:27",
-          "sortTime": 1518427620,
-          "srcDate": "2018-02-12"
-        },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "17:11",
-          "sortTime": 1518448260
-        },
-        "types": [],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
-        },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
-      },
-      {
-        "num": "749Л",
-        "category": 2,
-        "travelTime": "5:44",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Івано-Франківськ",
-          "date": "понеділок, 12.02.2018",
-          "time": "11:27",
-          "sortTime": 1518427620,
-          "srcDate": "2018-02-12"
-        },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "17:11",
-          "sortTime": 1518448260
-        },
-        "types": [
+        "types":[
           {
-            "id": "С1",
-            "title": "Сидячий першого класу",
-            "letter": "С1",
-            "places": 32
+            "id":"С1",
+            "title":"Сидячий першого класу",
+            "letter":"С1",
+            "places":20
           },
           {
-            "id": "С2",
-            "title": "Сидячий другого класу",
-            "letter": "С2",
-            "places": 19
+            "id":"С2",
+            "title":"Сидячий другого класу",
+            "letter":"С2",
+            "places":25
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "715Л",
-        "category": 1,
-        "travelTime": "6:57",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Пшемисль",
-          "date": "понеділок, 12.02.2018",
-          "time": "16:12",
-          "sortTime": 1518444720,
-          "srcDate": "2018-02-12"
+        "num":"749Д",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"5:50",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"14:07",
+          "sortTime":1554289620,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "23:09",
-          "sortTime": 1518469740
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"19:57",
+          "sortTime":1554310620
         },
-        "types": [
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
+        },
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
+      },
+      {
+        "num":"013К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"9:07",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"17:11",
+          "sortTime":1554300660,
+          "srcDate":"2019-04-03"
+        },
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Солотвино 1",
+          "date":"четвер, 04.04.2019",
+          "time":"02:18",
+          "sortTime":1554333480
+        },
+        "types":[
           {
-            "id": "С1",
-            "title": "Сидячий першого класу",
-            "letter": "С1",
-            "places": 99
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":4
           },
           {
-            "id": "С2",
-            "title": "Сидячий другого класу",
-            "letter": "С2",
-            "places": 283
+            "id":"П",
+            "title":"Плацкарт",
+            "letter":"П",
+            "places":21
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "142Ш",
-        "category": 0,
-        "travelTime": "12:26",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Львів",
-          "date": "понеділок, 12.02.2018",
-          "time": "16:20",
-          "sortTime": 1518445200,
-          "srcDate": "2018-02-12"
+        "num":"743Ш",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"5:10",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Дарниця",
+          "date":"середа, 03.04.2019",
+          "time":"17:33",
+          "sortTime":1554301980,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "вівторок, 13.02.2018",
-          "time": "04:46",
-          "sortTime": 1518489960
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"22:43",
+          "sortTime":1554320580
         },
-        "types": [
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
+        },
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
+      },
+      {
+        "num":"743Л",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"5:10",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Дарниця",
+          "date":"середа, 03.04.2019",
+          "time":"17:33",
+          "sortTime":1554301980,
+          "srcDate":"2019-04-03"
+        },
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"середа, 03.04.2019",
+          "time":"22:43",
+          "sortTime":1554320580
+        },
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
+        },
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
+      },
+      {
+        "num":"081К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"9:12",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"18:30",
+          "sortTime":1554305400,
+          "srcDate":"2019-04-03"
+        },
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Ужгород",
+          "date":"четвер, 04.04.2019",
+          "time":"03:42",
+          "sortTime":1554338520
+        },
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 18
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":7
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 65
-          },
-          {
-            "id": "П",
-            "title": "Плацкарт",
-            "letter": "П",
-            "places": 16
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":1
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "132Л",
-        "category": 0,
-        "travelTime": "10:26",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Львів",
-          "date": "понеділок, 12.02.2018",
-          "time": "17:15",
-          "sortTime": 1518448500,
-          "srcDate": "2018-02-12"
+        "num":"081Д",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"9:12",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"18:30",
+          "sortTime":1554305400,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Харків-Пас",
-          "date": "вівторок, 13.02.2018",
-          "time": "03:41",
-          "sortTime": 1518486060
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Чоп",
+          "date":"четвер, 04.04.2019",
+          "time":"03:42",
+          "sortTime":1554338520
         },
-        "types": [
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
+        },
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
+      },
+      {
+        "num":"043К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"7:43",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"19:06",
+          "sortTime":1554307560,
+          "srcDate":"2019-04-03"
+        },
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Івано-Франківськ",
+          "date":"четвер, 04.04.2019",
+          "time":"02:49",
+          "sortTime":1554335340
+        },
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 19
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":8
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 13
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":2
           },
           {
-            "id": "П",
-            "title": "Плацкарт",
-            "letter": "П",
-            "places": 7
+            "id":"П",
+            "title":"Плацкарт",
+            "letter":"П",
+            "places":8
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "705Л",
-        "category": 1,
-        "travelTime": "5:06",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Пшемисль",
-          "date": "понеділок, 12.02.2018",
-          "time": "18:47",
-          "sortTime": 1518454020,
-          "srcDate": "2018-02-12"
+        "num":"049К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"8:26",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"20:12",
+          "sortTime":1554311520,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "понеділок, 12.02.2018",
-          "time": "23:53",
-          "sortTime": 1518472380
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Трускавець",
+          "date":"четвер, 04.04.2019",
+          "time":"04:38",
+          "sortTime":1554341880
         },
-        "types": [
+        "types":[
           {
-            "id": "С1",
-            "title": "Сидячий першого класу",
-            "letter": "С1",
-            "places": 100
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":15
           },
           {
-            "id": "С2",
-            "title": "Сидячий другого класу",
-            "letter": "С2",
-            "places": 247
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":7
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "017Л",
-        "category": 0,
-        "travelTime": "6:28",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Ужгород",
-          "date": "понеділок, 12.02.2018",
-          "time": "19:04",
-          "sortTime": 1518455040,
-          "srcDate": "2018-02-12"
+        "num":"143К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"9:56",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"20:19",
+          "sortTime":1554311940,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Харків-Пас",
-          "date": "вівторок, 13.02.2018",
-          "time": "01:32",
-          "sortTime": 1518478320
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Івано-Франківськ",
+          "date":"четвер, 04.04.2019",
+          "time":"06:15",
+          "sortTime":1554347700
         },
-        "types": [
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 14
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":29
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 4
+            "id":"П",
+            "title":"Плацкарт",
+            "letter":"П",
+            "places":20
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "017Ш",
-        "category": 0,
-        "travelTime": "6:28",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Ужгород",
-          "date": "понеділок, 12.02.2018",
-          "time": "19:04",
-          "sortTime": 1518455040,
-          "srcDate": "2018-02-12"
+        "num":"029К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"6:48",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"21:08",
+          "sortTime":1554314880,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Харків-Пас",
-          "date": "вівторок, 13.02.2018",
-          "time": "01:32",
-          "sortTime": 1518478320
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Ужгород",
+          "date":"четвер, 04.04.2019",
+          "time":"03:56",
+          "sortTime":1554339360
         },
-        "types": [],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "types":[
+
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "144Л",
-        "category": 0,
-        "travelTime": "9:46",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Ворохта",
-          "date": "понеділок, 12.02.2018",
-          "time": "20:05",
-          "sortTime": 1518458700,
-          "srcDate": "2018-02-12"
+        "num":"017О",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"6:41",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Харків-Пас",
+          "date":"середа, 03.04.2019",
+          "time":"22:09",
+          "sortTime":1554318540,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "вівторок, 13.02.2018",
-          "time": "05:51",
-          "sortTime": 1518493860
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Ужгород",
+          "date":"четвер, 04.04.2019",
+          "time":"04:50",
+          "sortTime":1554342600
         },
-        "types": [
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 4
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":19
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 1
-          },
-          {
-            "id": "П",
-            "title": "Плацкарт",
-            "letter": "П",
-            "places": 2
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":1
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "001Л",
-        "category": 0,
-        "travelTime": "6:19",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Івано-Франківськ",
-          "date": "понеділок, 12.02.2018",
-          "time": "21:57",
-          "sortTime": 1518465420,
-          "srcDate": "2018-02-12"
+        "num":"017К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"6:41",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Харків-Пас",
+          "date":"середа, 03.04.2019",
+          "time":"22:09",
+          "sortTime":1554318540,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Костянтинівка",
-          "date": "вівторок, 13.02.2018",
-          "time": "04:16",
-          "sortTime": 1518488160
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Ужгород",
+          "date":"четвер, 04.04.2019",
+          "time":"04:50",
+          "sortTime":1554342600
         },
-        "types": [
-          {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 18
-          },
-          {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 24
-          }
+        "types":[
+
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "081Л",
-        "category": 0,
-        "travelTime": "8:40",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Ужгород",
-          "date": "понеділок, 12.02.2018",
-          "time": "22:46",
-          "sortTime": 1518468360,
-          "srcDate": "2018-02-12"
+        "num":"007К",
+        "category":0,
+        "isTransformer":1,
+        "travelTime":"6:41",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"22:22",
+          "sortTime":1554319320,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "вівторок, 13.02.2018",
-          "time": "07:26",
-          "sortTime": 1518499560
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"четвер, 04.04.2019",
+          "time":"05:03",
+          "sortTime":1554343380
         },
-        "types": [
+        "types":[
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 3
-          }
-        ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
-        },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
-      },
-      {
-        "num": "050Л",
-        "category": 0,
-        "travelTime": "8:25",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Трускавець",
-          "date": "понеділок, 12.02.2018",
-          "time": "23:08",
-          "sortTime": 1518469680,
-          "srcDate": "2018-02-12"
-        },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "вівторок, 13.02.2018",
-          "time": "07:33",
-          "sortTime": 1518499980
-        },
-        "types": [
-          {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 3
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":18
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 20
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":13
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       },
       {
-        "num": "092Л",
-        "category": 0,
-        "travelTime": "7:26",
-        "from": {
-          "code": "2218000",
-          "station": "Львів",
-          "stationTrain": "Львів",
-          "date": "понеділок, 12.02.2018",
-          "time": "23:19",
-          "sortTime": 1518470340,
-          "srcDate": "2018-02-12"
+        "num":"091К",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"7:23",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Київ-Пасажирський",
+          "date":"середа, 03.04.2019",
+          "time":"22:37",
+          "sortTime":1554320220,
+          "srcDate":"2019-04-03"
         },
-        "to": {
-          "code": "2200001",
-          "station": "Київ-Пасажирський",
-          "stationTrain": "Київ-Пасажирський",
-          "date": "вівторок, 13.02.2018",
-          "time": "06:45",
-          "sortTime": 1518497100
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Львів",
+          "date":"четвер, 04.04.2019",
+          "time":"06:00",
+          "sortTime":1554346800
         },
-        "types": [
+        "types":[
           {
-            "id": "Л",
-            "title": "Люкс",
-            "letter": "Л",
-            "places": 18
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":19
           },
           {
-            "id": "К",
-            "title": "Купе",
-            "letter": "К",
-            "places": 22
+            "id":"К",
+            "title":"Купе",
+            "letter":"К",
+            "places":41
           }
         ],
-        "child": {
-          "minDate": "2004-02-13",
-          "maxDate": "2018-01-23"
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
         },
-        "allowStud": 1,
-        "allowBooking": 1,
-        "allowRoundtrip": 1,
-        "isEurope": 0
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
+      },
+      {
+        "num":"046Д",
+        "category":0,
+        "isTransformer":0,
+        "travelTime":"9:20",
+        "from":{
+          "code":"2200001",
+          "station":"Київ-Пасажирський",
+          "stationTrain":"Лисичанськ",
+          "date":"середа, 03.04.2019",
+          "time":"22:47",
+          "sortTime":1554320820,
+          "srcDate":"2019-04-03"
+        },
+        "to":{
+          "code":"2218000",
+          "station":"Львів",
+          "stationTrain":"Ужгород",
+          "date":"четвер, 04.04.2019",
+          "time":"08:07",
+          "sortTime":1554354420
+        },
+        "types":[
+          {
+            "id":"Л",
+            "title":"Люкс",
+            "letter":"Л",
+            "places":8
+          },
+          {
+            "id":"П",
+            "title":"Плацкарт",
+            "letter":"П",
+            "places":3
+          }
+        ],
+        "child":{
+          "minDate":"2005-04-04",
+          "maxDate":"2019-03-12"
+        },
+        "allowStudent":1,
+        "allowBooking":1,
+        "isCis":0,
+        "isEurope":0,
+        "allowPrivilege":1
       }
     ]
   }

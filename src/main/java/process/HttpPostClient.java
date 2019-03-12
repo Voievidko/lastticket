@@ -69,7 +69,7 @@ public class HttpPostClient {
         } catch (IOException e){
             e.printStackTrace();
         }
-        return TrainsMapper.toDto(result.toString()).getData().getTrains();
+        return TrainsMapper.toDto(result.toString()).getTrains();
     }
 
     void requestAllAvaliableWagonNumbersByType(String cityCodeFrom, String cityCodeTo, String date, String trainNum,

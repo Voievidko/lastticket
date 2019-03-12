@@ -8,16 +8,19 @@ import java.util.List;
 public class Train {
     private String num;
     private int category;
+    private int isTransformer;
     private String travelTime;
     private From from;
     private To to;
     private List<Type> types;
     private Child child;
-    private int allowStud;
+    private int allowStudent;
     private int allowBooking;
+    private int isCis;
     private int allowRoundtrip;
     private int isEurope;
     private int noReserve;
+    private int allowPrivilege;
 
     public Train() {
     }
@@ -36,6 +39,14 @@ public class Train {
 
     public void setCategory(int category) {
         this.category = category;
+    }
+
+    public int getIsTransformer() {
+        return isTransformer;
+    }
+
+    public void setIsTransformer(int isTransformer) {
+        this.isTransformer = isTransformer;
     }
 
     public String getTravelTime() {
@@ -78,12 +89,12 @@ public class Train {
         this.child = child;
     }
 
-    public int getAllowStud() {
-        return allowStud;
+    public int getAllowStudent() {
+        return allowStudent;
     }
 
-    public void setAllowStud(int allowStud) {
-        this.allowStud = allowStud;
+    public void setAllowStudent(int allowStudent) {
+        this.allowStudent = allowStudent;
     }
 
     public int getAllowBooking() {
@@ -92,6 +103,14 @@ public class Train {
 
     public void setAllowBooking(int allowBooking) {
         this.allowBooking = allowBooking;
+    }
+
+    public int getIsCis() {
+        return isCis;
+    }
+
+    public void setIsCis(int isCis) {
+        this.isCis = isCis;
     }
 
     public int getAllowRoundtrip() {
@@ -116,5 +135,13 @@ public class Train {
 
     public void setNoReserve(int noReserve) {
         this.noReserve = noReserve;
+    }
+
+    public int getAllowPrivilege() {
+        return allowPrivilege;
+    }
+
+    public void setAllowPrivilege(int allowPrivilege) {
+        this.allowPrivilege = allowPrivilege;
     }
 }
