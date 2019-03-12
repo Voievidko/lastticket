@@ -18,26 +18,28 @@ public class Main {
 //        System.out.println();
 //        System.out.println();
         List<String> trainNumbers = new ArrayList();
-        trainNumbers.add("150Л");
+        trainNumbers.add("143К");
 //        trainNumbers.add("749Д");
 
 
         List<String> neededTypes = new ArrayList();
-        neededTypes.add("Л");
+        neededTypes.add("П");
 //        neededTypes.add("П");
 //        neededTypes.add("К");
 
-        int placeNumber = 1;
+        int placeNumber = 6;
+        boolean singleWagon = false;
 
-        String from = "Івано-Франківськ";
-        String to = "Київ";
-        String date = "2019-03-20"; //YYYY-MM-DD
+        String from = "Київ";
+        String to = "Івано-Франківськ";
+        String date = "2019-03-28"; //YYYY-MM-DD
 
 
         TrainProcessor trainProcessor = new TrainProcessor.Builder(from, to, date)
                 .requiredTrainTypes(neededTypes)
                 .requiredTrainNumbers(trainNumbers)
                 .numberOfTickets(placeNumber)
+                .singleWagon(singleWagon)
                 .build();
         trainProcessor.proceed();
     }

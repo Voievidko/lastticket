@@ -1,7 +1,11 @@
 package process;
 
+import entity.places.Places;
 import entity.trains.Train;
+import entity.wagons.Wagons;
+import mappers.PlacesMapper;
 import mappers.TrainsMapper;
+import mappers.WagonMapper;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -72,8 +76,8 @@ public class HttpPostClient {
         return TrainsMapper.toDto(result.toString()).getTrains();
     }
 
-    void requestAllAvaliableWagonNumbersByType(String cityCodeFrom, String cityCodeTo, String date, String trainNum,
-                                               String wagonTypeId){
+    Wagons requestAllAvailableWagonNumbersByType(String cityCodeFrom, String cityCodeTo, String date, String trainNum,
+                                                 String wagonTypeId){
         StringBuilder result = new StringBuilder();
         try {
             HttpClient client = HttpClients.createDefault();
@@ -97,15 +101,14 @@ public class HttpPostClient {
             while ((line = rd.readLine()) != null) {
                 result.append(line);
             }
-            System.out.println(result);
         } catch (IOException e){
             e.printStackTrace();
         }
-
+        return WagonMapper.toDto(result.toString());
     }
 
-    void requestAllAvaliablePlacesInWagon(String cityCodeFrom, String cityCodeTo, String date, String trainNum,
-                                          String wagonNum, String wagonType){
+    Places requestAllAvaliablePlacesInWagon(String cityCodeFrom, String cityCodeTo, String date, String trainNum,
+                                            String wagonNum, String wagonType){
         StringBuilder result = new StringBuilder();
         try {
             HttpClient client = HttpClients.createDefault();
@@ -121,7 +124,6 @@ public class HttpPostClient {
 
             post.setEntity(new UrlEncodedFormEntity(urlParameters, "UTF-8"));
 
-
             HttpResponse response = client.execute(post);
             BufferedReader rd = new BufferedReader(
                     new InputStreamReader(response.getEntity().getContent()));
@@ -130,10 +132,9 @@ public class HttpPostClient {
             while ((line = rd.readLine()) != null) {
                 result.append(line);
             }
-            System.out.println(result);
         } catch (IOException e){
             e.printStackTrace();
         }
-
+        return PlacesMapper.toDto(result.toString());
     }
 }

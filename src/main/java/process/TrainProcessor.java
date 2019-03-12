@@ -2,6 +2,8 @@ package process;
 
 import entity.trains.Train;
 import entity.trains.Type;
+import entity.wagons.Wagon;
+import entity.wagons.Wagons;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,10 @@ public class TrainProcessor {
     private List<String> trainNumbers;
     private List<String> trainTypes;
     private int numberOfTickets;
+    private boolean singleWagon;
+
+    String cityCodeFrom;
+    String cityCodeTo;
 
     private TrainPrinter trainPrinter;
 
@@ -30,6 +36,7 @@ public class TrainProcessor {
         private List<String> trainNumbers;
         private List<String> trainTypes;
         private int numberOfTickets;
+        private boolean singleWagon;
 
         public Builder (String from, String to, String date){
             this.from = from;
@@ -49,6 +56,11 @@ public class TrainProcessor {
 
         public Builder numberOfTickets (int numberOfTickets) {
             this.numberOfTickets = numberOfTickets;
+            return this;
+        }
+
+        public Builder singleWagon (boolean singleWagon){
+            this.singleWagon = singleWagon;
             return this;
         }
 
@@ -73,6 +85,7 @@ public class TrainProcessor {
             } else {
                 trainProcessor.numberOfTickets = this.numberOfTickets;
             }
+            trainProcessor.singleWagon = this.singleWagon;
             trainProcessor.trainPrinter = new TrainPrinter(trainProcessor);
             return trainProcessor;
         }
@@ -105,11 +118,15 @@ public class TrainProcessor {
         return numberOfTickets;
     }
 
+    public boolean isSingleWagon() {
+        return singleWagon;
+    }
+
     public void proceed(){
         HttpPostClient httpPostClient = new HttpPostClient();
 
-        String cityCodeFrom = CityPicker.getCityCode(from);
-        String cityCodeTo = CityPicker.getCityCode(to);
+        this.cityCodeFrom = CityPicker.getCityCode(from);
+        this.cityCodeTo = CityPicker.getCityCode(to);
 
         trainPrinter.printCityCodeInformation(to, from, cityCodeTo, cityCodeFrom);
 
@@ -147,6 +164,7 @@ public class TrainProcessor {
                 .filter(a -> isTrainNumberExistInRequiredTrainList(a))
                 .filter(a -> isCarTypesExistInRequiredTrainList(a))
                 .filter(a -> isEnoughTickets(a))
+                .filter(a -> isTrainHaveEnoughPlacesInOneWagon(a))
                 .collect(Collectors.toList())
                 .size() > 0;
     }
@@ -162,7 +180,7 @@ public class TrainProcessor {
     //Check if input train type meets required train types (like "К" / "Л" / "П")
     private boolean isCarTypesExistInRequiredTrainList(Train train){
         if (trainTypes == null || trainTypes.isEmpty()){
-            return true;
+            return false;
         }
         for (Type type : train.getTypes()){
             if (trainTypes.contains(type.getId())){
@@ -179,6 +197,24 @@ public class TrainProcessor {
             freePlacesInOneTrain += type.getPlaces();
         }
         return numberOfTickets <= freePlacesInOneTrain;
+    }
+
+    //Check if input train have lower places
+    private boolean isTrainHaveEnoughPlacesInOneWagon(Train train){
+        if (!singleWagon){
+            return true;
+        }
+        HttpPostClient httpPostClient = new HttpPostClient();
+        for (String trainType : trainTypes){
+            Wagons wagons = httpPostClient.
+                    requestAllAvailableWagonNumbersByType(cityCodeFrom, cityCodeTo, date, train.getNum(), trainType);
+            for (Wagon wagon : wagons.getWagons()){
+                if (wagon.getFree() >= numberOfTickets){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private int getDelay(){

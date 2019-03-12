@@ -38,6 +38,7 @@ public class TrainPrinter {
         System.out.println("        Search in scope of train numbers: " + trainProcessor.getTrainNumbers());
         System.out.println("        Search for types: " + trainProcessor.getTrainTypes());
         System.out.println("        Number of required tickets in one train: " + trainProcessor.getNumberOfTickets());
+        System.out.println("        In single wagon: " + trainProcessor.isSingleWagon());
         System.out.println();
     }
 
